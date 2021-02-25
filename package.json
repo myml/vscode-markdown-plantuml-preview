@@ -1,68 +1,73 @@
 {
-	"name": "vscode-markdown-plantuml-preview",
-	"displayName": "vscode-markdown-plantuml-preview",
-	"description": "",
-	"version": "0.0.1",
-	"engines": {
-		"vscode": "^1.52.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"onCommand:vscode-markdown-plantuml-preview.helloWorld"
-	],
-	"main": "./out/extension.js",
-	"contributes": {
-		"markdown.markdownItPlugins": true,
-		"configuration": {
-			"title": "Markdown Plantuml Preview",
-			"properties": {
-				"markdown.plantuml.openMarker": {
-					"type": "string",
-					"default": "```plantuml",
-					"description": "String to use as oppening delimiter."
-				},
-				"markdown.plantuml.closeMarker": {
-					"type": "string",
-					"default": "```",
-					"description": "String to use as closing delimiter."
-				},
-				"markdown.plantuml.imageFormat": {
-					"type": "string",
-					"default": "svg",
-					"description": "Image format"
-				},
-				"markdown.plantuml.server": {
-					"type": "string",
-					"default": "https://www.plantuml.com/plantuml",
-					"description": "Remote render server"
-				}
-			}
-		}
-	},
-	"scripts": {
-		"vscode:prepublish": "yarn run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"pretest": "yarn run compile && yarn run lint",
-		"lint": "eslint src --ext ts",
-		"test": "node ./out/test/runTest.js"
-	},
-	"devDependencies": {
-		"@types/glob": "^7.1.3",
-		"@types/mocha": "^8.0.4",
-		"@types/node": "^12.11.7",
-		"@types/vscode": "^1.53.0",
-		"@typescript-eslint/eslint-plugin": "^4.9.0",
-		"@typescript-eslint/parser": "^4.9.0",
-		"eslint": "^7.15.0",
-		"glob": "^7.1.6",
-		"mocha": "^8.1.3",
-		"typescript": "^4.1.2",
-		"vscode-test": "^1.4.1"
-	},
-	"dependencies": {
-		"markdown-it-plantuml": "^1.4.1"
-	}
+  "name": "vscode-markdown-plantuml-preview",
+  "publisher": "myml",
+  "displayName": "vscode-markdown-plantuml-preview",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/myml/vscode-markdown-plantuml-preview.git"
+  },
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.53.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:vscode-markdown-plantuml-preview.helloWorld"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "markdown.markdownItPlugins": true,
+    "configuration": {
+      "title": "Markdown Plantuml Preview",
+      "properties": {
+        "markdown.plantuml.openMarker": {
+          "type": "string",
+          "default": "```plantuml",
+          "description": "String to use as oppening delimiter."
+        },
+        "markdown.plantuml.closeMarker": {
+          "type": "string",
+          "default": "```",
+          "description": "String to use as closing delimiter."
+        },
+        "markdown.plantuml.imageFormat": {
+          "type": "string",
+          "default": "svg",
+          "description": "Image format"
+        },
+        "markdown.plantuml.server": {
+          "type": "string",
+          "default": "https://www.plantuml.com/plantuml",
+          "description": "Remote render server"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.53.0",
+    "@typescript-eslint/eslint-plugin": "^4.9.0",
+    "@typescript-eslint/parser": "^4.9.0",
+    "eslint": "^7.15.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.1.3",
+    "typescript": "^4.1.2",
+    "vscode-test": "^1.4.1"
+  },
+  "dependencies": {
+    "markdown-it-plantuml": "^1.4.1"
+  }
 }
