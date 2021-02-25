@@ -2,6 +2,8 @@
 
 markdown plantum preview
 
+## Example
+
 ````markdown
 # UML example
 
@@ -12,4 +14,10 @@ Bob -> Alice : hello
 ```
 ````
 
+## Related Projects
+
 [markdown-it-plantuml](https://www.npmjs.com/package/markdown-it-plantuml)
+
+## License
+
+[MIT](./LICENSE)
